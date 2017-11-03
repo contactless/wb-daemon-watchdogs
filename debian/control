@@ -1,0 +1,11 @@
+Source: wb-daemon-watchdogs
+Maintainer: Nikita webconn Maslov <n.maslov@contactless.ru>
+Section: misc
+Priority: optional
+Standards-Version: 3.9.2
+Build-Depends: debhelper (>= 9), pkg-config
+
+Package: wb-daemon-watchdogs
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, cron, mosquitto
+Description: Wiren Board services watchdog scripts
