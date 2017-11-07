@@ -8,9 +8,9 @@ maybe_add_script() {
     PRESENT=`/usr/bin/crontab -l | grep "$2"`
     if [ -z "$PRESENT" ]; then
         echo "-> Add $2"
-        (/usr/bin/crontab -l; echo "$1 $2 >>/var/log/wb-daemon-watchdogs.log 2>&1") | crontab -
+        (/usr/bin/crontab -l; echo "$1 $2 2>&1 | logger -t wb-daemon-watchdogs") | crontab -
     fi
 }
 
-maybe_add_script "*/2 * * * *" "/usr/share/wb-daemon-watchdogs/check_wbrules.sh"
+maybe_add_script "*/5 * * * *" "/usr/share/wb-daemon-watchdogs/check_wbrules.sh"
 maybe_add_script "* * * * *" "/usr/share/wb-daemon-watchdogs/check_confed.sh"

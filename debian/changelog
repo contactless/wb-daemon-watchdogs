@@ -1,3 +1,10 @@
+wb-daemon-watchdogs (1.1) stable; urgency=medium
+
+  * log to syslog
+  * check wbrules every 5 minutes
+
+ -- Evgeny Boger <boger@contactless.ru>  Tue, 07 Nov 2017 10:39:52 +0300
+
 wb-daemon-watchdogs (1.0) stable; urgency=medium
 
   * Initial release
