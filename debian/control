@@ -7,5 +7,5 @@ Build-Depends: debhelper (>= 9), pkg-config
 
 Package: wb-daemon-watchdogs
 Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}, cron, mosquitto
+Depends: ${shlibs:Depends}, ${misc:Depends}, cron, mosquitto, wb-rules, wb-rules-system, wb-mqtt-confed
 Description: Wiren Board services watchdog scripts
